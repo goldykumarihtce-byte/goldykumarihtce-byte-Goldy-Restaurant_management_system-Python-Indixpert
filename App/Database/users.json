@@ -1,0 +1,142 @@
+[
+    {
+        "userid": "78a3f6f5-0e1b-4038-9c3e-3b767e272a75",
+        "username": "savii",
+        "email": "savii@gmail.com",
+        "password": "savii1234",
+        "role": "admin"
+    },
+    {
+        "userid": "2d8e00",
+        "username": "goldy",
+        "email": "goldy@gmail.com",
+        "password": "goldy1234",
+        "role": "admin"
+    },
+    {
+        "userid": "cba4c9",
+        "username": "Goldy",
+        "email": "gk@.com",
+        "password": "123456",
+        "role": "admin"
+    },
+    {
+        "userid": "f9264c",
+        "username": "shempee",
+        "email": "shempee@gmail.com",
+        "password": "shempee1234",
+        "role": "staff"
+    },
+    {
+        "userid": "a85226",
+        "username": "shajiya",
+        "email": "shajiya@gmail.com",
+        "password": "shajiya1234",
+        "role": "staff"
+    },
+    {
+        "userid": "eca999",
+        "username": "Abhi",
+        "email": "ak@.com",
+        "password": "123456",
+        "role": "staff"
+    },
+    {
+        "userid": "7899ed",
+        "username": "golden",
+        "email": "golden@gmail.com",
+        "password": "golden1234",
+        "role": "staff"
+    },
+    {
+        "userid": "5150fa",
+        "username": "Nisha",
+        "email": "nisha@gmail.com",
+        "password": "nisha1234",
+        "role": "admin"
+    },
+    {
+        "userid": "b60424",
+        "username": "Riyakumari",
+        "email": "riya@gmail.com",
+        "password": "riya1234",
+        "role": "staff"
+    },
+    {
+        "userid": "9e87f2",
+        "username": "gudiya",
+        "email": "gudiya@gmail.com",
+        "password": "gudiya1234",
+        "role": "staff"
+    },
+    {
+        "userid": "49397a",
+        "username": "Saloni",
+        "email": "saloni@gmail.com",
+        "password": "saloni1234",
+        "role": "staff"
+    },
+    {
+        "userid": "d5ce61",
+        "username": "abhi",
+        "email": "ak@gmail.com",
+        "password": "123456",
+        "role": "staff"
+    },
+    {
+        "userid": "6cef70",
+        "username": "rani",
+        "email": "rani@gmail.com",
+        "password": "rani1234",
+        "role": "staff"
+    },
+    {
+        "userid": "d9f682",
+        "username": "sumit",
+        "email": "sumit@gmail.com",
+        "password": "sumit1234",
+        "role": "admin"
+    },
+    {
+        "userid": "482c57",
+        "username": "shajiyakhatoon",
+        "email": "shajiyakhatoon@gmail.com",
+        "password": "shajiya2345",
+        "role": "staff"
+    },
+    {
+        "userid": "a90fbb",
+        "username": "Tejswini",
+        "email": "Tejswini@gmail.com",
+        "password": "teju1234",
+        "role": "staff"
+    },
+    {
+        "userid": "e6c5ab",
+        "username": "Gopi",
+        "email": "gopi@gmail.com",
+        "password": "gopi1234",
+        "role": "staff"
+    },
+    {
+        "userid": "f3fa58",
+        "username": "gudiya",
+        "email": "gudi@gmail.com",
+        "password": "gudi1234",
+        "role": "staff"
+    },
+    {
+        "userid": "445689",
+        "username": "ravi",
+        "email": "ravi@gmail.com",
+        "password": "ravi1234",
+        "role": "staff"
+    },
+    {
+        "userid": "620128",
+        "username": "ak",
+        "email": "amk@gmail.com",
+        "password": "123456",
+        "role": "admin"
+    }
+]

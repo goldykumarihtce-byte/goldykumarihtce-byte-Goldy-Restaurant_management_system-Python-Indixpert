@@ -1,0 +1,122 @@
+[
+    {
+        "time": "2026-03-20 21:19:44.844410",
+        "error": "Duplicate signup attempt: savii@gmail.com"
+    },
+    {
+        "time": "2026-03-20 21:30:07.479819",
+        "error": "ValueError: User entered invalid number"
+    },
+    {
+        "time": "2026-03-20 21:30:07.484842",
+        "error": "invalid literal for int() with base 10: 'Dum Biryani'"
+    },
+    {
+        "time": "2026-03-20 21:42:09.199684",
+        "error": "'Order' object has no attribute 'current_order'"
+    },
+    {
+        "time": "2026-03-20 22:03:19.749291",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-20 22:03:58.791924",
+        "error": "[Errno 2] No such file or directory: 'App/Database/orders.json'"
+    },
+    {
+        "time": "2026-03-23 11:41:41.330725",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-03-23 11:42:13.485050",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-03-23 12:28:16",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-03-23 12:29:32",
+        "error": "Invalid email format during signup: shajiya90"
+    },
+    {
+        "time": "2026-03-23 12:29:44",
+        "error": "Invalid email format during signup: shajiya1234"
+    },
+    {
+        "time": "2026-03-23 13:13:10",
+        "error": "'str' object has no attribute 'get'"
+    },
+    {
+        "time": "2026-03-23 13:13:41",
+        "error": "'str' object has no attribute 'get'"
+    },
+    {
+        "time": "2026-03-23 13:17:12",
+        "error": "Duplicate signup attempt: ravi@gmail.com"
+    },
+    {
+        "time": "2026-03-23 22:48:10",
+        "error": "'ExceptionHandler' object has no attribute 'invalid_choice'"
+    },
+    {
+        "time": "2026-03-23 23:21:50",
+        "error": "'Admin_dashboard' object has no attribute 'orders_file'"
+    },
+    {
+        "time": "2026-03-23 23:22:15",
+        "error": "'Admin_dashboard' object has no attribute 'orders_file'"
+    },
+    {
+        "time": "2026-03-24 10:42:19",
+        "error": "'Admin_dashboard' object has no attribute 'orders_file'"
+    },
+    {
+        "time": "2026-03-24 11:34:09",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-03-24 11:35:50",
+        "error": "Invalid email format during signup: ssavgmail.com"
+    },
+    {
+        "time": "2026-03-24 11:35:59",
+        "error": "Duplicate signup attempt: ak@gmail.com"
+    },
+    {
+        "time": "2026-03-24 11:36:25",
+        "error": "Invalid email format during signup: amk@123"
+    },
+    {
+        "time": "2026-03-24 11:38:01",
+        "error": "'ExceptionHandler' object has no attribute 'invalid_choice'"
+    },
+    {
+        "time": "2026-03-24 12:22:58",
+        "error": "'Admin_dashboard' object has no attribute 'orders_file'"
+    },
+    {
+        "time": "2026-03-24 12:36:10",
+        "error": "'Admin_dashboard' object has no attribute 'orders_file'"
+    },
+    {
+        "time": "2026-03-24 12:36:53",
+        "error": "Login attempt for non-existing user: ravii@gmail.com"
+    },
+    {
+        "time": "2026-03-24 12:42:38",
+        "error": "Incorrect password attempt for email: savii@gmail.com"
+    },
+    {
+        "time": "2026-03-24 12:42:43",
+        "error": "Incorrect password attempt for email: savii@gmail.com"
+    },
+    {
+        "time": "2026-03-24 12:45:44",
+        "error": "'Order_ID'"
+    },
+    {
+        "time": "2026-03-24 13:07:27",
+        "error": "'price'"
+    }
+]
