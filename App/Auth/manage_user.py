@@ -61,54 +61,10 @@ def run_auth():
         user = obj.user_menu()
 
         if not user:
-            break
+                break
 
         obj1 = User_dashboard(user)
         obj1.dashboardUser()
-# from App.Auth.Sign_up import Signup
-# from App.Auth.Login import Login
-# from App.Utils.exception_handling import ExceptionHandler
-# from App.Dashboard.dashboard import User_dashboard
-
-# class menu:
-
-#     def user_menu(self):
-#             while True:
-
-#                 print("\n===========RESTAURANT MANAGEMENT SYSTEM===============\n")
-#                 print("\n1. Signup")
-#                 print("2. Login")
-#                 print("3. Exit")
-
-#                 try:
-#                     option = input("\nPlease select any option: ")
-#                     if option.isdigit():
-#                         option=int(option)
-                    
-
-#                     if option == 1:
-#                         signup = Signup()
-#                         user=signup.signup_user() 
-
-                         
-
-#                     elif option == 2:
-#                         login = Login()
-#                         user= login.login_user()
-
-#                         if user:
-                            
-#                            return user
-                            
-
-#                     elif option == 3:
-#                         print("Exit")
-#                         return None
-
-#                     else:
-#                         print("Invalid option")
-
-#                 except Exception as e:
-#                     ExceptionHandler.handle(e)        
+        
 
 

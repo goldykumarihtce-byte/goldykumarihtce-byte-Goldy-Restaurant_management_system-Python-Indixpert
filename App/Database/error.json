@@ -118,5 +118,285 @@
     {
         "time": "2026-03-24 13:07:27",
         "error": "'price'"
+    },
+    {
+        "time": "2026-03-24 22:00:29",
+        "error": "'id'"
+    },
+    {
+        "time": "2026-03-24 22:54:17",
+        "error": "'order_id'"
+    },
+    {
+        "time": "2026-03-24 23:01:34",
+        "error": "'Order_ID'"
+    },
+    {
+        "time": "2026-03-25 12:11:57",
+        "error": "Expecting value: line 2 column 3 (char 4)"
+    },
+    {
+        "time": "2026-03-25 12:12:10",
+        "error": "Expecting value: line 2 column 3 (char 4)"
+    },
+    {
+        "time": "2026-03-25 12:12:36",
+        "error": "Expecting value: line 2 column 3 (char 4)"
+    },
+    {
+        "time": "2026-03-25 12:13:02",
+        "error": "Expecting value: line 2 column 3 (char 4)"
+    },
+    {
+        "time": "2026-03-25 12:39:49",
+        "error": "cannot access local variable 'menu' where it is not associated with a value"
+    },
+    {
+        "time": "2026-03-25 12:45:57",
+        "error": "cannot access local variable 'menu' where it is not associated with a value"
+    },
+    {
+        "time": "2026-03-25 13:01:05",
+        "error": "'Order_ID'"
+    },
+    {
+        "time": "2026-03-25 13:01:45",
+        "error": "'Order_ID'"
+    },
+    {
+        "time": "2026-03-25 18:31:30",
+        "error": "Login attempt for non-existing user: savii@gmail.com1234"
+    },
+    {
+        "time": "2026-03-25 18:47:11",
+        "error": "'Menu' object has no attribute 'menu'"
+    },
+    {
+        "time": "2026-03-25 20:28:46",
+        "error": "'ExceptionHandler' object has no attribute 'invalid_choice'"
+    },
+    {
+        "time": "2026-03-25 21:23:57",
+        "error": "'Ganeratebill' object has no attribute 'generate_bill'"
+    },
+    {
+        "time": "2026-03-25 21:24:12",
+        "error": "'Ganeratebill' object has no attribute 'generate_bill'"
+    },
+    {
+        "time": "2026-03-25 21:38:29",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-25 21:39:04",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-25 22:11:37",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-25 22:17:58",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-25 22:20:04",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-25 22:21:37",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-25 22:29:23",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-26 08:42:48",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-26 08:52:54",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "time": "2026-03-26 08:59:00",
+        "error": "'Admin_dashboard' object has no attribute 'order_file'"
+    },
+    {
+        "time": "2026-03-26 09:01:11",
+        "error": "'Admin_dashboard' object has no attribute 'order_file'"
+    },
+    {
+        "time": "2026-03-26 09:14:20",
+        "error": "'Menu' object has no attribute 'show_box'"
+    },
+    {
+        "time": "2026-03-26 09:16:48",
+        "error": "'Menu' object has no attribute 'show_box'"
+    },
+    {
+        "time": "2026-03-26 09:36:29",
+        "error": "'Menu' object has no attribute 'show_box'"
+    },
+    {
+        "time": "2026-03-26 13:04:58",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:05:17",
+        "error": "'ExceptionHandler' object has no attribute 'invalid_choice'"
+    },
+    {
+        "time": "2026-03-26 13:06:11",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:06:20",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:11:24",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:11:28",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:17:49",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:18:08",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:22:08",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:22:14",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:28:46",
+        "error": "Order.order_item() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:34:45",
+        "error": "Login attempt for non-existing user: ravii@gmail.com"
+    },
+    {
+        "time": "2026-03-26 13:34:49",
+        "error": "Invalid email format entered"
+    },
+    {
+        "time": "2026-03-26 13:35:04",
+        "error": "Staff_dashboard.staffdashboard_menu() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:35:25",
+        "error": "Staff_dashboard.staffdashboard_menu() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:40:05",
+        "error": "Staff_dashboard.staffdashboard_menu() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 13:41:27",
+        "error": "Staff_dashboard.staffdashboard_menu() missing 1 required positional argument: 'username'"
+    },
+    {
+        "time": "2026-03-26 20:30:53",
+        "error": "Admin_dashboard.show_menu() takes 0 positional arguments but 1 was given"
+    },
+    {
+        "time": "2026-03-26 22:19:06",
+        "error": "[Errno 2] No such file or directory: 'App/Database/booking.json'"
+    },
+    {
+        "time": "2026-03-26 22:20:24",
+        "error": "Booking Error: 'ExceptionHandler' object has no attribute 'hanlder_write'"
+    },
+    {
+        "time": "2026-03-26 22:26:44",
+        "error": "Booking Error: 'ExceptionHandler' object has no attribute 'hanlder_write'"
+    },
+    {
+        "time": "2026-03-27 10:39:00",
+        "error": "Booking Error: 'ExceptionHandler' object has no attribute 'hanlder_write'"
+    },
+    {
+        "time": "2026-03-27 13:18:41",
+        "error": "Booking Error: 'sheet'"
+    },
+    {
+        "time": "2026-03-27 13:27:38",
+        "error": "Booking Error: 'sheet'"
+    },
+    {
+        "time": "2026-03-27 14:21:10",
+        "error": "Invalid email format entered"
+    },
+    {
+        "time": "2026-03-27 20:36:42",
+        "error": "'Booking' object has no attribute 'show_box'"
+    },
+    {
+        "time": "2026-03-27 21:59:16",
+        "error": "'Staff_dashboard' object has no attribute 'console'"
+    },
+    {
+        "time": "2026-03-27 21:59:45",
+        "error": "'Staff_dashboard' object has no attribute 'console'"
+    },
+    {
+        "time": "2026-03-27 22:03:18",
+        "error": "'Menu' object has no attribute 'console'"
+    },
+    {
+        "time": "2026-03-27 22:04:01",
+        "error": "Booking Error: 'Booking' object has no attribute 'console'"
+    },
+    {
+        "time": "2026-03-27 22:04:01",
+        "error": "'Booking' object has no attribute 'console'"
+    },
+    {
+        "time": "2026-03-27 22:13:21",
+        "error": "'Booking' object has no attribute 'show_box'"
+    },
+    {
+        "time": "2026-03-28 13:21:31",
+        "error": "Booking Error: 'Booking' object has no attribute 'time_slots'"
+    },
+    {
+        "time": "2026-03-28 13:22:02",
+        "error": "Booking Error: 'Booking' object has no attribute 'time_slots'"
+    },
+    {
+        "time": "2026-03-28 13:23:43",
+        "error": "Booking Error: 'Booking' object has no attribute 'time_slots'"
+    },
+    {
+        "time": "2026-03-28 13:31:12",
+        "error": "Booking Error: 'Booking' object has no attribute 'time_slots'"
+    },
+    {
+        "time": "2026-03-28 14:27:30",
+        "error": "Login attempt for non-existing user: ravi@gamil.com"
+    },
+    {
+        "time": "2026-03-28 21:16:17",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-03-28 22:53:52",
+        "error": "Report Error: unsupported operand type(s) for +=: 'int' and 'NoneType'"
+    },
+    {
+        "time": "2026-03-29 20:35:01",
+        "error": "invalid literal for int() with base 10: 'Rajma'"
     }
 ]

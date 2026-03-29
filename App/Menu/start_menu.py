@@ -1,8 +1,15 @@
+
+
+
+
 from App.Database.db import Data
-from App.Order.order import Order
 from App.Utils.exception_handling import ExceptionHandler
 from App.Logs.logger import log_error
-from App.Billing.bill import Ganerate_bill
+from App.Billing.bill import Ganeratebill
+from App.Dashboard.Admin_dashboard import Admin_dashboard
+from App.Order.order import Order
+from rich.console import Console
+from rich.panel import Panel
 
 
 class Menu:
@@ -10,183 +17,136 @@ class Menu:
     def __init__(self):
         self.handler = ExceptionHandler()
         self.db = Data()
+        self.menu_file = "App/Database/menu.json"
+        self.order_file = "App/Database/order.json"
+        self.review_file = "App/Database/review.json"
+        self.console = Console()  # ✅ Use this instead of global console
 
-        self.menu_file = "App/Database/menu.json"       
-        self.order_file = "App/Database/order.json"    
-        self.review_file = "App/Database/review.json"  
+    # ================= BOX UI =================
+    def show_box(self, title, messages, status=None):
+        self.console.print(f"\n[bold cyan]{title}[/bold cyan]")
+        for msg in messages:
+            if status == "success":
+                self.console.print(f"[green]✔ {msg}[/green]")
+            elif status == "error":
+                self.console.print(f"[red]✖ {msg}[/red]")
+            else:
+                self.console.print(msg)
 
-    def show_menu(self):
-
-        menu = self.db.read_data(self.menu_file)
-
-        if not menu:
-            print("Menu is empty")
-            return
-
-        print("\n------ FOOD MENU🍞🍔🍗 ------")
-
-        for i, item in enumerate(menu, start=1):
-            print(f"{i}. {item['name']} - ₹{item['price']}")  
-
-    
+    # ================= CANCEL ORDER =================
     def cancel_replace_order(self):
         try:
             orders = self.db.read_data(self.order_file)
-
             if not orders:
-                print("No orders available")
+                self.console.print("[red]No orders available[/red]")
                 return
 
-            order_id = input("Enter Order ID to cancel: ")
-
-            found = None
-            for order in orders:
-                if str(order["Order_ID"]) == order_id:
-                    found = order
-                    break
+            order_id = input("Enter Order ID: ")
+            found = next((o for o in orders if str(o.get("order_id")) == order_id), None)
 
             if not found:
-                print("Order not found ")
+                self.console.print("[red]Order not found[/red]")
                 return
 
-            
             found["Status"] = "Cancelled"
-            print("Old order cancelled ")
-
-            print("\nPlace new order ✅")
-
-            menu = self.db.read_data(self.menu_file)
-
-            item = input("Enter new item name: ").strip().lower()
-
-            food_found = None
-            for food in menu:
-                if food["name"].lower() == item:
-                    food_found = food
-                    break
-
-            if not food_found:
-                print("Item not available ")
-                return
-
-            try:
-                qty = int(input("Enter quantity: "))
-            except ValueError:
-                print("Invalid quantity")
-                return
-
-            
-            if orders:
-                new_id = max(o["Order_ID"] for o in orders) + 1
-            else:
-                new_id = 1
-
-            new_order = {
-                "Order_ID": new_id,
-                "item": item,
-                "Quantity": qty,
-                "Status": "Pending"
-            }
-
-            orders.append(new_order)
             self.db.write_data(self.order_file, orders)
-
-            print("\n✅ New Order Placed Successfully")
-            print(f"🆔 New Order ID: {new_id}")
+            self.console.print("[yellow]Order Cancelled ✅[/yellow]")
 
         except Exception as e:
             log_error(e)
 
+    # ================= ADD REVIEW =================
     def add_review(self):
         try:
             reviews = self.db.read_data(self.review_file)
-
             if not isinstance(reviews, list):
                 reviews = []
 
-            name = input("Enter your name: ").strip()
-            review_text = input("Enter your review: ").strip()
-
-            if not name or not review_text:
-                print("Name and Review cannot be empty")
-                return
-            
-            review_id = len(reviews) + 1
+            name = input("Enter name: ")
+            review = input("Enter review: ")
 
             from datetime import datetime
-
             reviews.append({
-                "Review_ID": review_id,
+                "id": len(reviews) + 1,
                 "name": name,
-                "review": review_text,
+                "review": review,
                 "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             })
 
             self.db.write_data(self.review_file, reviews)
-
-            print("✅Review added successfully")
+            self.console.print("[green]✔ Review Added[/green]")
 
         except Exception as e:
             log_error(e)
 
-    def menu(self):
-
+    # ================= START MENU =================
+    def start_menu(self):
         while True:
+            panel = Panel(
+                "[bold cyan]1.[/bold cyan] Show Menu 🍔\n"
+                "[bold cyan]2.[/bold cyan] Order Items 🛒\n"
+                "[bold cyan]3.[/bold cyan] Cancel Order ❌\n"
+                "[bold cyan]4.[/bold cyan] Generate Bill 🧾\n"
+                "[bold cyan]5.[/bold cyan] Add Review ✨\n"
+                "[bold cyan]6.[/bold cyan] Exit 🔚",
+                title="🍽️ MAIN MENU",
+                border_style="cyan"
+            )
 
-            print("\n1. Show Menu🍔🍕🥤🍟")
-            print("2. Order Items🛒")
-            print("3. Cancel_Replace_Order❌-🍿")
-            print("4. Add Review❇️")
-            print("5. Back")
-            print("-" * 30)
+            self.console.print(panel)
 
-            option = input("Please select any option: ")
+            option = input("Enter choice: ").strip()
 
             if not option.isdigit():
-                self.handler.invalid_choice()
+                self.console.print(Panel("[bold red]Invalid choice[/bold red]", title="ERROR"))
                 continue
 
             option = int(option)
 
             if option == 1:
-                self.show_menu()
+                menu = Admin_dashboard()
+                menu.show_menu()
 
             elif option == 2:
-                order = Order()              
+                order = Order()
                 order.order_item()
 
             elif option == 3:
                 self.cancel_replace_order()
 
             elif option == 4:
-                orders = self.db.read_data(self.order_file)
+                try:
+                    orders = self.db.read_data(self.order_file)
+                    if not isinstance(orders, list):
+                        orders = []
 
-                if not orders:
-                    print("No orders available")
-                    continue
+                    if not orders:
+                        self.console.print(Panel("[bold yellow]No orders available[/bold yellow]", title="INFO"))
+                        continue
 
-                order_id = input("Enter Order ID: ")
+                    order_id = input("Enter Order ID: ").strip()
+                    found = next((o for o in orders if str(o.get("order_id")) == order_id), None)
 
-                found = None
-                for order in orders:
-                    if str(order.get("order_id")) == order_id:
-                        found = order
-                        break
+                    if not found:
+                        self.console.print(Panel("[bold red]Order not found[/bold red]", title="ERROR"))
+                        continue
 
-                if not found:
-                    print("Order not found")
-                    continue
+                    if found.get("Status", "").lower() == "cancelled":
+                        self.console.print(Panel("[bold red]Order is cancelled[/bold red]", title="ERROR"))
+                        continue
 
-                bill = Ganerate_bill()
-                bill.generate_bill(found)   # ✅ correct
-                                
+                    Ganeratebill().generate_bill(found)
+
+                except Exception as e:
+                    log_error(e)
+                    self.console.print(Panel("[bold red]Bill generation failed[/bold red]", title="ERROR"))
 
             elif option == 5:
                 self.add_review()
 
             elif option == 6:
-                print("Exiting menu")
-                break
+                self.console.print(Panel("[bold yellow]Exiting Menu...[/bold yellow]", title="EXIT"))
+                return
 
             else:
-                self.handler.invalid_choice()
+                self.console.print(Panel("[bold red]Invalid option[/bold red]", title="ERROR"))

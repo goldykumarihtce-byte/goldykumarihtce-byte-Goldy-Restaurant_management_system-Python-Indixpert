@@ -1,19 +1,5 @@
 [
     {
-        "order_id": 1,
-        "username": "guest",
-        "items": [
-            {
-                "name": "jalebi",
-                "type": "dessert",
-                "size": "single",
-                "price": 60,
-                "quantity": 2
-            }
-        ],
-        "Status": "Pending"
-    },
-    {
         "order_id": 2,
         "username": "Ravi",
         "items": [
@@ -32,7 +18,16 @@
                 "quantity": 4
             }
         ],
-        "Status": "Preparing"
+        "subtotal": 180,
+        "gst": 9.0,
+        "total_payment": 189.0,
+        "payment_method": "UPI",
+        "upi_details": {
+            "qr_pin": "****"
+        },
+        "card_details": null,
+        "payment_status": "Paid",
+        "date": "2026-03-26 20:59:20"
     },
     {
         "order_id": 3,
@@ -53,7 +48,16 @@
                 "quantity": 2
             }
         ],
-        "Status": "Preparing"
+        "subtotal": 540,
+        "gst": 27.0,
+        "total_payment": 567.0,
+        "payment_method": "UPI",
+        "upi_details": {
+            "upi_id": "goldy@bob"
+        },
+        "card_details": null,
+        "payment_status": "Paid",
+        "date": "2026-03-26 21:24:33"
     },
     {
         "order_id": 4,
@@ -74,7 +78,16 @@
                 "quantity": 4
             }
         ],
-        "Status": "Pending"
+        "subtotal": 220,
+        "gst": 11.0,
+        "total_payment": 231.0,
+        "payment_method": "UPI",
+        "upi_details": {
+            "qr_pin": "****"
+        },
+        "card_details": null,
+        "payment_status": "Paid",
+        "date": "2026-03-28 11:40:29"
     },
     {
         "order_id": 5,
@@ -95,6 +108,10 @@
                 "quantity": 4
             }
         ],
-        "Status": "Pending"
+        "subtotal": 440,
+        "gst": 22.0,
+        "total_payment": 462.0,
+        "payment_method": "Cash",
+        "date": "2026-03-28 14:30:26"
     }
 ]
