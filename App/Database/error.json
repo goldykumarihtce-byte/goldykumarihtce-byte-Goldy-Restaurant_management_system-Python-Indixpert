@@ -398,5 +398,73 @@
     {
         "time": "2026-03-29 20:35:01",
         "error": "invalid literal for int() with base 10: 'Rajma'"
+    },
+    {
+        "time": "2026-04-01 11:24:15",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-04-01 11:24:50",
+        "error": "Invalid email format during signup: goldy567"
+    },
+    {
+        "time": "2026-04-01 11:27:28",
+        "error": "Login attempt for non-existing user: gjk@gmailll.com"
+    },
+    {
+        "time": "2026-04-01 11:27:42",
+        "error": "Login attempt for non-existing user: gk@gmail.com"
+    },
+    {
+        "time": "2026-04-01 21:48:20",
+        "error": "'Booking' object has no attribute 'booking_menu'"
+    },
+    {
+        "time": "2026-04-01 22:13:27",
+        "error": "'Booking' object has no attribute 'view_booking'"
+    },
+    {
+        "time": "2026-04-02 11:10:18",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-04-02 11:10:42",
+        "error": "Invalid email format during signup: sumitgmail.com"
+    },
+    {
+        "time": "2026-04-02 13:19:01",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-04-02 13:19:08",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-04-02 13:20:01",
+        "error": "Invalid username entered during signup"
+    },
+    {
+        "time": "2026-04-02 13:20:19",
+        "error": "Invalid email format during signup: ak123mail.com"
+    },
+    {
+        "time": "2026-04-02 13:20:25",
+        "error": "Duplicate signup attempt: ak@gmail.com"
+    },
+    {
+        "time": "2026-04-02 13:20:31",
+        "error": "Duplicate signup attempt: amk@gmail.com"
+    },
+    {
+        "time": "2026-04-02 13:21:06",
+        "error": "Invalid password format during signup"
+    },
+    {
+        "time": "2026-04-02 20:43:59",
+        "error": "name 'username' is not defined"
+    },
+    {
+        "time": "2026-04-02 21:54:42",
+        "error": "Illegal trailing comma before end of array: line 526 column 6 (char 10198)"
     }
 ]

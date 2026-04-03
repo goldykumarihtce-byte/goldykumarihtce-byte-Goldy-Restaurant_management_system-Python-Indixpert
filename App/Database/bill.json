@@ -113,5 +113,41 @@
         "total_payment": 462.0,
         "payment_method": "Cash",
         "date": "2026-03-28 14:30:26"
+    },
+    {
+        "order_id": 6,
+        "username": "goldy",
+        "items": [
+            {
+                "name": "shahi paneer",
+                "type": "veg",
+                "size": "full",
+                "price": 250,
+                "quantity": 2
+            }
+        ],
+        "subtotal": 500,
+        "gst": 25.0,
+        "total_payment": 525.0,
+        "payment_method": "UPI",
+        "date": "2026-04-02 11:06:00"
+    },
+    {
+        "order_id": 7,
+        "username": "sara",
+        "items": [
+            {
+                "name": "gulab jamun",
+                "type": "dessert",
+                "size": "single",
+                "price": 40,
+                "quantity": 3
+            }
+        ],
+        "subtotal": 120,
+        "gst": 6.0,
+        "total_payment": 126.0,
+        "payment_method": "UPI",
+        "date": "2026-04-02 11:29:40"
     }
 ]

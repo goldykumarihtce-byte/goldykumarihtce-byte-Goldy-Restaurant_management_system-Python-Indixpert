@@ -138,5 +138,35 @@
         "email": "amk@gmail.com",
         "password": "123456",
         "role": "admin"
+    },
+    {
+        "userid": "926c89",
+        "username": "goldy",
+        "email": "gk@gmail.comm",
+        "password": "qera123",
+        "role": "staff"
+    },
+    {
+        "userid": "53bc1c",
+        "username": "sara",
+        "email": "sara@gmail.com",
+        "password": "sara123",
+        "role": "staff"
+    },
+    {
+        "userid": "d3a4a7",
+        "username": "abhi",
+        "email": "ank@gmail.com",
+        "password": "1234567",
+        "role": "staff"
+    },
+    {
+        "userid": "05154b",
+        "name": "Anmol Yadav",
+        "address": "Mirganj Bihar",
+        "phone No": "2345679876",
+        "email": "anmol@gmail.com",
+        "password": "anmol1234",
+        "role": "staff"
     }
 ]

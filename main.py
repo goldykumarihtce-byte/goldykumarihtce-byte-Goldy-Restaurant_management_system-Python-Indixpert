@@ -1,4 +1,4 @@
 
-from App.Auth.manage_user import run_auth
+from App.Auth.Manage_user import run_auth
 run_auth()
 

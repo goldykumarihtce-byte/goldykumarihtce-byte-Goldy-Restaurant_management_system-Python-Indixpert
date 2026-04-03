@@ -1,14 +1,13 @@
 
 
-
-from datetime import datetime, timedelta
+import uuid
+from datetime import datetime
 from App.Database.db import Data
 from App.Utils.exception_handling import ExceptionHandler
 from App.Logs.logger import log_error
 
 from rich.console import Console
 from rich.panel import Panel
-from rich.table import Table
 
 
 class Booking:
@@ -35,7 +34,18 @@ class Booking:
             "Evening": ["3-5"]
         }
 
-    # ================= MENU =================
+    def is_future_slot(self, date, slot):
+        now = datetime.now()
+
+        
+        if date == now.strftime("%Y-%m-%d"):
+            start_hour = int(slot.split("-")[0])
+            slot_time = datetime.strptime(f"{start_hour}:00", "%H:%M").time()
+
+            return slot_time > now.time()
+
+        return True    
+
     def booking_menu(self):
         while True:
             self.console.print(Panel.fit(
@@ -53,6 +63,7 @@ class Booking:
             if choice == "1":
                 self.create_booking()
             elif choice == "2":
+                
                 self.view_booking()
             elif choice == "3":
                 self.cancel_booking()
@@ -61,7 +72,9 @@ class Booking:
             elif choice == "5":
                 break
             else:
-                self.console.print(Panel("[bold red]Invalid choice[/bold red]", title="❌ ERROR"))
+                self.console.print(Panel("[bold red]Invalid choice[/bold red]", title="❌ ERROR"))    
+
+
 
     # ================= CREATE =================
     def create_booking(self):
@@ -72,151 +85,168 @@ class Booking:
 
             while True:
 
-                self.console.print(Panel.fit(
-                    "[bold yellow]🍽 BOOK YOUR TABLE[/bold yellow]",
-                    border_style="cyan"
-                ))
+                self.console.print(Panel.fit("🍽 BOOK YOUR TABLE", border_style="cyan"))
 
-                name = input("👤 Enter Name: ")
-                phone = input("📞 Enter Mobile No: ")
-                persons = int(input("👥 Enter Persons: "))
-                date = input("📅 Enter Date (YYYY-MM-DD): ")
+                
+                while True:
+                    name = input("Name: ")
+                    if name.isalpha():
+                        break
+                    print("Invalid name")
 
-                # 🔥 AVAILABLE CATEGORIES
+                
+                while True:
+                    phone = input("Phone: ")
+                    if phone.isdigit() and len(phone) == 10:
+                        break
+                    print("Invalid phone")
+
+                
+                while True:
+                    try:
+                        persons = int(input("Persons: "))
+                        if persons > 0:
+                            break
+                    except:
+                        pass
+                    print("Invalid persons")
+
+                
+                while True:
+                    date = input("Date (YYYY-MM-DD): ")
+                    try:
+                        entered = datetime.strptime(date, "%Y-%m-%d")
+                        if entered.date() < datetime.now().date():
+                            print("Past date not allowed")
+                            continue
+                        break
+                    except:
+                        print("Invalid date")
+
+                #  AVAILABLE SLOTS WITH FIX
                 available_categories = {}
+
                 for category, slots in self.time_slots.items():
-                    free_slots = [
-                        s for s in slots
-                        if not any(
+                    free_slots = []
+
+                    for s in slots:
+
+                        if not self.is_future_slot(date, s):
+                            continue
+
+                        booked = any(
                             b.get("date") == date and
                             b.get("time") == s and
                             b.get("status") == "Confirmed"
                             for b in data
                         )
-                    ]
+
+                        if not booked:
+                            free_slots.append(s)
+
                     if free_slots:
                         available_categories[category] = free_slots
 
                 if not available_categories:
-                    self.console.print(Panel("[bold red]No slots available[/bold red]", title="❌ ERROR"))
+                    print("No slots available")
                     return
 
-                cat_text = "\n".join([f"{i}. {cat}" for i, cat in enumerate(available_categories, 1)])
-                self.console.print(Panel(cat_text, title="⏰ Time Categories", border_style="blue"))
-
+                # CATEGORY
                 while True:
+                    for i, cat in enumerate(available_categories, 1):
+                        print(f"{i}. {cat}")
                     try:
-                        choice = int(input("👉 Enter choice: "))
+                        choice = int(input("Choose category: "))
                         category = list(available_categories.keys())[choice - 1]
-                        available_slots = available_categories[category]
+                        slots = available_categories[category]
                         break
                     except:
-                        self.console.print(Panel("[red]Invalid choice[/red]", title="❌ ERROR"))
+                        print("Invalid choice")
 
-                slot_text = "\n".join([f"{i}. {s}" for i, s in enumerate(available_slots, 1)])
-                self.console.print(Panel(slot_text, title=f"{category} Slots", border_style="magenta"))
-
+                # SLOT
                 while True:
+                    for i, s in enumerate(slots, 1):
+                        print(f"{i}. {s}")
                     try:
-                        choice = int(input("👉 Select Slot: "))
-                        if 1 <= choice <= len(available_slots):
-                            time = available_slots[choice - 1]
+                        choice = int(input("Choose slot: "))
+                        if 1 <= choice <= len(slots):
+                            time = slots[choice - 1]
                             break
                     except:
                         pass
-                    self.console.print(Panel("[red]Invalid choice[/red]", title="❌ ERROR"))
+                    print("Invalid slot")
 
-                # 🔥 AVAILABLE SEATS
+                # SEATS
                 table_map = {}
-
                 for table, capacity in self.tables.items():
-                    free_seats = []
-
+                    free = []
                     for i in range(1, capacity + 1):
                         seat = f"S{i}"
-
                         booked = any(
                             (table in b.get("table", []) and seat in b.get("sheet", []))
                             and b.get("date") == date
                             and b.get("time") == time
-                            and b.get("status") == "Confirmed"
                             for b in data
                         )
-
                         if not booked:
-                            free_seats.append(seat)
-
-                    if free_seats:
-                        table_map[table] = free_seats
+                            free.append(seat)
+                    if free:
+                        table_map[table] = free
 
                 if not table_map:
-                    self.console.print(Panel("[red]No seats available[/red]", title="❌ ERROR"))
+                    print("No seats available")
                     return
 
-                table_text = "\n".join(
-                    [f"{t} → {', '.join(s)}" for t, s in table_map.items()]
-                )
+                for t, s in table_map.items():
+                    print(f"{t} → {', '.join(s)}")
 
-                self.console.print(Panel(table_text, title="💺 Available Tables & Seats", border_style="magenta"))
-
-                # 🔥 USER SELECT
+                # SELECT
                 selected = []
+                selected_set = set()
 
                 while True:
-                    table = input("👉 Enter Table (e.g., T1): ").upper()
+                    table = input("Table: ").upper()
 
                     if table not in table_map:
-                        self.console.print(Panel("[red]Invalid Table[/red]", title="❌ ERROR"))
+                        print("Invalid table")
                         continue
 
-                    seats_input = input("👉 Enter Seats (S1,S2): ").upper().split(",")
+                    seats = input("Seats (S1,S2): ").upper().split(",")
 
-                    valid = all(seat.strip() in table_map[table] for seat in seats_input)
-
+                    valid = all(seat.strip() in table_map[table] for seat in seats)
                     if not valid:
-                        self.console.print(Panel("[red]Invalid seats[/red]", title="❌ ERROR"))
+                        print("Invalid seats")
                         continue
 
-                    for s in seats_input:
-                        selected.append((table, s.strip()))
+                    for s in seats:
+                        tup = (table, s.strip())
+                        if tup in selected_set:
+                            print("Duplicate seat")
+                            continue
 
-                    more = input("Add more seats? (yes/no): ").lower()
-                    if more != "yes":
+                        selected.append(tup)
+                        selected_set.add(tup)
+
+                    more = input("More? (yes/no): ")
+                    if more == "no":
                         break
 
                 if len(selected) != persons:
-                    self.console.print(Panel("[bold red]Seats must match persons[/bold red]", title="❌ ERROR"))
+                    print("Seat mismatch")
                     return
 
-                # 💰 PRICE
+                # PRICE
                 total = sum(self.table_price.get(t[0], 0) for t in selected)
-                booking_id = len(data) + 1
 
-                # 🔥 GROUP VIEW
-                table_group = {}
-                for t, s in selected:
-                    table_group.setdefault(t, []).append(s)
+                # PAYMENT
+                while True:
+                    payment = input("Payment (paid/pending): ").lower()
+                    if payment in ["paid", "pending"]:
+                        break
+                    print("Invalid payment")
 
-                selected_text = "\n".join(
-                    [f"{t} → {', '.join(s)}" for t, s in table_group.items()]
-                )
-
-                self.console.print(Panel(selected_text, title="✅ Selected Seats", border_style="green"))
-
-                summary = f"""
-👤 Name     : {name}
-📞 Phone    : {phone}
-👥 Persons  : {persons}
-📅 Date     : {date}
-🕒 Time     : {time}
-💰 Amount   : ₹{total}
-"""
-                self.console.print(Panel(summary, title="📋 BOOKING SUMMARY", border_style="cyan"))
-
-                confirm = input("👉 Confirm Booking? (yes/no): ").lower()
-                if confirm != "yes":
-                    self.console.print(Panel("[yellow]Cancelled[/yellow]", title="INFO"))
-                    return
+                
+                booking_id = str(uuid.uuid4())[:3]
 
                 booking = {
                     "booking_id": booking_id,
@@ -228,199 +258,103 @@ class Booking:
                     "date": date,
                     "time": time,
                     "amount": total,
+                    "payment_status": payment.upper(),
                     "status": "Confirmed"
                 }
 
                 data.append(booking)
                 self.handler.handle_write(self.db.write_data, self.file, data)
 
-                self.console.print(Panel(f"""
-🎉 Booking Confirmed!
+                print(f"Booked! ID: {booking_id}")
 
-🆔 Booking ID : {booking_id}
-👤 Name       : {name}
-📅 Date       : {date}
-🕒 Time       : {time}
-💰 Amount     : ₹{total}
-""", title="✅ SUCCESS", border_style="green"))
-
-                again = input("\n👉 Do you want to book another table? (yes/no): ").lower()
+                again = input("Again? ")
                 if again != "yes":
                     break
 
         except Exception as e:
             log_error(str(e))
-            self.console.print(Panel("[bold red]Booking Error[/bold red]", title="❌ ERROR"))
 
-    # ================= VIEW =================
     def view_booking(self):
         try:
             data = self.handler.handle_read(self.db.read_data, self.file)
 
-            if not data:
+            if not isinstance(data, list) or not data:
                 self.console.print(Panel("[bold red]No bookings found[/bold red]", title="INFO"))
                 return
 
             for b in data:
-                table = Table(title=f"📋 Booking ID: {b.get('booking_id')}", show_lines=True)
-
-                table.add_column("Field", style="cyan")
-                table.add_column("Details", style="green")
-
-                tables = b.get("table", [])
-                seats = b.get("sheet", [])
-
-                if tables and seats:
-                    table_map = {}
-                    for t, s in zip(tables, seats):
-                        table_map.setdefault(t, []).append(s)
-                    table_text = "\n".join([f"{t} → {', '.join(s)}" for t, s in table_map.items()])
-                else:
-                    table_text = "Not Assigned"
-
-                table.add_row("👤 Name", str(b.get("name")))
-                table.add_row("📞 Phone", str(b.get("phone")))
-                table.add_row("📅 Date", str(b.get("date")))
-                table.add_row("🕒 Time", str(b.get("time")))
-                table.add_row("🍽 Tables", table_text)
-                table.add_row("💰 Amount", f"₹{b.get('amount')}")
-                table.add_row("📌 Status", str(b.get("status")))
-
-                self.console.print(Panel(table, border_style="blue"))
+                details = f"""
+    🆔 ID        : {b.get('booking_id')}
+    👤 Name      : {b.get('name')}
+    📞 Phone     : {b.get('phone')}
+    👥 Persons   : {b.get('persons')}
+    📅 Date      : {b.get('date')}
+    🕒 Time      : {b.get('time')}
+    💰 Amount    : ₹{b.get('amount')}
+    💳 Payment   : {b.get('payment_status')}
+    📌 Status    : {b.get('status')}
+    """
+                self.console.print(Panel(details, title="📋 BOOKING DETAILS", border_style="blue"))
 
         except Exception as e:
             log_error(str(e))
-            self.console.print(Panel("[bold red]Error loading bookings[/bold red]", title="❌ ERROR"))   
+            self.console.print(Panel("[red]Error loading bookings[/red]", title="❌ ERROR"))
+                
+                
 
+    
     def cancel_booking(self):
-        try:
-            data = self.handler.handle_read(self.db.read_data, self.file)
+        data = self.handler.handle_read(self.db.read_data, self.file)
 
-            if not isinstance(data, list) or not data:
-                self.console.print(Panel("[bold yellow]No bookings available[/bold yellow]", title="INFO"))
-                return
+        bid = input("Enter Booking ID: ").strip()
 
-            bid = input("Enter Booking ID to cancel: ").strip()
+        found = next(
+            (b for b in data if str(b.get("booking_id")) == bid),
+            None
+        )
 
-            if not bid.isdigit():
-                self.console.print(Panel("[bold red]Invalid Booking ID[/bold red]", title="ERROR"))
-                return
+        if not found:
+            print("Not found")
+            return
 
-            bid = int(bid)
+        if found.get("status") == "Cancelled":
+            print("Already cancelled")
+            return
 
-            found = next((b for b in data if b.get("booking_id") == bid), None)
+        found["status"] = "Cancelled"
+        self.handler.handle_write(self.db.write_data, self.file, data)
 
-            if not found:
-                self.console.print(Panel("[bold red]Booking not found[/bold red]", title="ERROR"))
-                return
-
-            # 🔥 Already cancelled check
-            if found.get("status", "").lower() == "cancelled":
-                self.console.print(Panel("[yellow]Booking already cancelled[/yellow]", title="INFO"))
-                return
-
-            # 🔥 Confirm cancel
-            confirm = input("Are you sure you want to cancel? (yes/no): ").lower()
-
-            if confirm != "yes":
-                self.console.print(Panel("[yellow]Cancellation aborted[/yellow]", title="INFO"))
-                return
-
-            # 🔥 Update status
-            found["status"] = "Cancelled"
-
-            # ✅ Proper save using handler
-            self.handler.handle_write(self.db.write_data, self.file, data)
-
-            # 🔥 Success panel
-            self.console.print(
-                Panel(
-                    f"[bold red]Booking ID {bid} cancelled successfully ❌[/bold red]",
-                    title="CANCELLED",
-                    border_style="red"
-                )
-            )
-
-        except Exception as e:
-            log_error(f"Cancel Booking Error: {e}")
-            self.console.print(Panel("[bold red]Error cancelling booking[/bold red]", title="ERROR"))
-
-
+        print("Cancelled successfully")
 
 
     def reschedule_booking(self):
-        try:
-            data = self.handler.handle_read(self.db.read_data, self.file)
+        data = self.handler.handle_read(self.db.read_data, self.file)
 
-            if not isinstance(data, list) or not data:
-                self.console.print(Panel("[bold yellow]No bookings available[/bold yellow]", title="INFO"))
-                return
+        bid = input("Enter Booking ID: ")
 
-            bid = input("Enter Booking ID to reschedule: ").strip()
+        found = next((b for b in data if str(b.get("booking_id")) == bid), None)
 
-            if not bid.isdigit():
-                self.console.print(Panel("[bold red]Invalid Booking ID[/bold red]", title="ERROR"))
-                return
+        if not found:
+            print("Not found")
+            return
 
-            bid = int(bid)
+        for i, cat in enumerate(self.time_slots, 1):
+            print(f"{i}. {cat}")
 
-            found = next(
-                (b for b in data if b.get("booking_id") == bid and b.get("status") == "Confirmed"),
-                None
-            )
+        choice = int(input("Choose: "))
+        category = list(self.time_slots.keys())[choice - 1]
 
-            if not found:
-                self.console.print(Panel("[bold red]Booking not found or already cancelled[/bold red]", title="ERROR"))
-                return
+        slots = self.time_slots[category]
 
-            # 🔥 Time Slot Table
-            table = Table(title="⏰ Available Time Slots", show_lines=True)
-            table.add_column("Option", justify="center", style="cyan")
-            table.add_column("Time Slot", style="green")
+        for i, s in enumerate(slots, 1):
+            print(f"{i}. {s}")
 
-            for i, slot in enumerate(self.time_slots, 1):
-                table.add_row(str(i), slot)
+        choice = int(input("Slot: "))
+        found["time"] = slots[choice - 1]
 
-            self.console.print(table)
+        self.handler.handle_write(self.db.write_data, self.file, data)
 
-            # 🔹 Select new slot
-            while True:
-                choice = input("Select new slot: ").strip()
+        print("Rescheduled")
 
-                if not choice.isdigit():
-                    self.console.print(Panel("[red]Invalid choice[/red]", title="ERROR"))
-                    continue
 
-                choice = int(choice)
 
-                if 1 <= choice <= len(self.time_slots):
-                    new_time = self.time_slots[choice - 1]
-                    break
-
-                self.console.print(Panel("[red]Choice out of range[/red]", title="ERROR"))
-
-            # 🔥 Confirm
-            confirm = input(f"Confirm reschedule to {new_time}? (yes/no): ").lower()
-
-            if confirm != "yes":
-                self.console.print(Panel("[yellow]Reschedule cancelled[/yellow]", title="INFO"))
-                return
-
-            # 🔥 Update
-            found["time"] = new_time
-
-            # ✅ Save using handler
-            self.handler.handle_write(self.db.write_data, self.file, data)
-
-            # 🔥 Success Panel
-            self.console.print(
-                Panel(
-                    f"[bold green]Booking ID {bid} rescheduled to {new_time} 🔄[/bold green]",
-                    title="SUCCESS",
-                    border_style="green"
-                )
-            )
-
-        except Exception as e:
-            log_error(f"Reschedule Error: {e}")
-            self.console.print(Panel("[bold red]Error rescheduling booking[/bold red]", title="ERROR"))         

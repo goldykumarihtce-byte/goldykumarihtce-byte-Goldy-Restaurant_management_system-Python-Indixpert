@@ -221,6 +221,67 @@
         "date": "2026-04-2",
         "time": "11-1",
         "amount": 400,
+        "status": "Cancelled"
+    },
+    {
+        "booking_id": "a2fcd93a",
+        "name": "goldy",
+        "phone": "6789543212",
+        "persons": 2,
+        "table": [
+            "T4",
+            "T4"
+        ],
+        "sheet": [
+            "S1",
+            "S2"
+        ],
+        "date": "2026-04-02",
+        "time": "9-11",
+        "amount": 240,
+        "payment_status": "PAID",
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": "59d",
+        "name": "goldy",
+        "phone": "2345676754",
+        "persons": 2,
+        "table": [
+            "T4",
+            "T4"
+        ],
+        "sheet": [
+            "S1",
+            "S2"
+        ],
+        "date": "2026-04-02",
+        "time": "11-1",
+        "amount": 240,
+        "payment_status": "PAID",
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": "d25",
+        "name": "sara",
+        "phone": "7209592431",
+        "persons": 4,
+        "table": [
+            "T5",
+            "T5",
+            "T5",
+            "T5"
+        ],
+        "sheet": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+        ],
+        "date": "2026-04-03",
+        "time": "1-3",
+        "amount": 1000,
+        "payment_status": "PENDING",
         "status": "Confirmed"
     }
 ]

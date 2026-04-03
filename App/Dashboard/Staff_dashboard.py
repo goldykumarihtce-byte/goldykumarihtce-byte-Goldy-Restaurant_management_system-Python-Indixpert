@@ -3,6 +3,7 @@ from App.Database.db import Data
 from App.Utils.exception_handling import ExceptionHandler
 from App.Logs.logger import log_error
 from App.Booking.booking import Booking
+from App.Inventory.inventory_manager import InventoryManager
 from rich.panel import Panel
 from rich.table import Table
 from rich.console import Console
@@ -85,7 +86,8 @@ class Staff_dashboard:
                 "[bold cyan]1.[/bold cyan] Place Order 🛒\n"
                 "[bold cyan]2.[/bold cyan] Update Order Status ⚡\n"
                 "[bold cyan]3.[/bold cyan] Booking 📅\n"
-                "[bold cyan]4.[/bold cyan] Back 🔙",
+                "[bold cyan]4.[/bold cyan] View Inventory 📦\n"
+                "[bold cyan]5.[/bold cyan] Back 🔙",
                 title="👨‍🍳 STAFF DASHBOARD",
                 border_style="blue"
             )
@@ -115,8 +117,12 @@ class Staff_dashboard:
             elif choice == 3:
                 book=Booking()
                 book.booking_menu() 
-                
+
             elif choice == 4:
+                ob = InventoryManager()
+                ob.view() 
+                
+            elif choice == 5:
                 print("Going back to main menu")
                 self.console.print(Panel("[bold yellow]Going back...[/bold yellow]", title="EXIT"))
                 break

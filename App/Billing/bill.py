@@ -1,7 +1,5 @@
 
 
-
-
 from datetime import datetime
 from App.Database.db import Data
 from App.Logs.logger import log_error

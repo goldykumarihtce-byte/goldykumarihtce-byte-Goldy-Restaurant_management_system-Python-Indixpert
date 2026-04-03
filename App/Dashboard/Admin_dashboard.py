@@ -5,6 +5,7 @@ from App.Utils.exception_handling import ExceptionHandler
 from App.Logs.logger import log_error
 from App.Booking.booking import Booking
 from App.Reports.report_file import Report
+from App.Inventory.inventory_manager import inventory_staff_menu
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
@@ -311,8 +312,9 @@ class Admin_dashboard:
                 "[bold cyan]6.[/bold cyan] Check Payment 💳\n"
                 "[bold cyan]7.[/bold cyan] View Booking 📅\n"
                 "[bold cyan]8.[/bold cyan] Total Revenue 💰\n"
-                "[bold cyan]9.[/bold cyan] Report ✅\n"
-                "[bold cyan]10.[/bold cyan] Back 🔙",
+                "[bold cyan]9.[/bold cyan] Inventory  💰\n"
+                "[bold cyan]10.[/bold cyan] Report ✅\n"
+                "[bold cyan]11.[/bold cyan] Back 🔙",
                 title="🛠️ ADMIN DASHBOARD",
                 border_style="blue"
             )
@@ -353,10 +355,14 @@ class Admin_dashboard:
                 self.total_revenue()
 
             elif choice == 9:
+                inventory_staff_menu()
+            
+
+            elif choice == 10:
                 report=Report()
                 report.generate_report()    
 
-            elif choice == 10:
+            elif choice == 11:
                 self.console.print(Panel("[bold yellow]Going back...[/bold yellow]", title="EXIT"))
                 break
 

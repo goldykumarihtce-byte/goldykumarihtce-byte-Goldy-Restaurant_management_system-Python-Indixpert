@@ -1,28 +1,39 @@
 
+
 from App.Auth.Sign_up import Signup
 from App.Auth.Login import Login
 from App.Utils.exception_handling import ExceptionHandler
 from App.Dashboard.dashboard import User_dashboard
+
+from rich.console import Console
+from rich.panel import Panel
 
 
 class Menu:
 
     def __init__(self):
         self.handler = ExceptionHandler()
+        self.console = Console()
 
     def user_menu(self):
         while True:
 
-            print("\n=========== RESTAURANT MANAGEMENT SYSTEM ===============\n")
-            print("1. Signup")
-            print("2. Login")
-            print("3. Exit")
+            
+            self.console.print(
+                Panel.fit(
+                    "[bold cyan]RESTAURANT MANAGEMENT SYSTEM[/bold cyan]\n\n"
+                    "1. Signup 🆕\n"
+                    "2. Login 🔐\n"
+                    "3. Exit 🔚",
+                    border_style="green"
+                )
+            )
 
             try:
-                option = input("\nPlease select any option: ")
+                option = input("\nEnter your choice (1-3): ")
 
                 if not option.isdigit():
-                    print("Please enter a valid number")
+                    self.console.print("[red]Please enter a valid number[/red]")
                     continue
 
                 option = int(option)
@@ -42,15 +53,15 @@ class Menu:
                         return user
 
                 elif option == 3:
-                    print("Exit")
+                    self.console.print("[yellow]Exiting...[/yellow]")
                     return None
 
                 else:
-                    print("Invalid option")
+                    self.console.print("[red]Invalid option[/red]")
 
             except Exception as e:
                 self.handler.logger.log_error(e)
-                print("Something went wrong!")
+                self.console.print("[red]Something went wrong![/red]")
 
 
 
@@ -61,10 +72,7 @@ def run_auth():
         user = obj.user_menu()
 
         if not user:
-                break
+            break
 
         obj1 = User_dashboard(user)
         obj1.dashboardUser()
-        
-
-
