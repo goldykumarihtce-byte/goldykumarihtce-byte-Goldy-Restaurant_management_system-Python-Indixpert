@@ -1,0 +1,287 @@
+[
+    {
+        "booking_id": 1,
+        "name": "Savii Singh",
+        "phone": "5678432345",
+        "persons": 2,
+        "date": "2026-03-31",
+        "time": "9-11",
+        "tables": [
+            "T1",
+            "T1"
+        ],
+        "seats": [
+            "S1",
+            "S2"
+        ],
+        "amount": 200,
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": 2,
+        "name": "Goldy Rai",
+        "phone": "6789543212",
+        "persons": 4,
+        "date": "2026-04-2",
+        "time": "3-5",
+        "tables": [
+            "T1",
+            "T1",
+            "T2",
+            "T2"
+        ],
+        "seats": [
+            "S1",
+            "S2",
+            "S1",
+            "S2"
+        ],
+        "amount": 500,
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": 3,
+        "name": "Abhi Yadav",
+        "phone": "3456783212",
+        "persons": 3,
+        "date": "2026-04-2",
+        "time": "3-5",
+        "tables": [
+            "T1",
+            "T1",
+            "T2"
+        ],
+        "seats": [
+            "S1",
+            "S2",
+            "S1"
+        ],
+        "amount": 350,
+        "status": "Cancelled"
+    },
+    {
+        "booking_id": 4,
+        "name": "goldy",
+        "phone": "2345678932",
+        "persons": 3,
+        "date": "2026-04-2",
+        "time": "1-3",
+        "tables": [
+            "T1",
+            "T1",
+            "T2"
+        ],
+        "seats": [
+            "S1",
+            "S2",
+            "S1"
+        ],
+        "amount": 350,
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": 5,
+        "name": "Goldy",
+        "phone": "2345678765",
+        "persons": 4,
+        "table": [
+            "T3",
+            "T3",
+            "T3",
+            "T3"
+        ],
+        "sheet": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+        ],
+        "date": "2026-04-2",
+        "time": "9-11",
+        "amount": 800,
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": 6,
+        "name": "savii",
+        "phone": "3245678765",
+        "persons": 4,
+        "table": [
+            "T10",
+            "T10",
+            "T10",
+            "T10"
+        ],
+        "sheet": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+        ],
+        "date": "2026-04-2",
+        "time": "3-5",
+        "amount": 840,
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": 7,
+        "name": "Abhi",
+        "phone": "4532123490",
+        "persons": 4,
+        "table": [
+            "T10",
+            "T10",
+            "T10",
+            "T10"
+        ],
+        "sheet": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+        ],
+        "date": "2026-04-2",
+        "time": "11-1",
+        "amount": 840,
+        "status": "Cancelled"
+    },
+    {
+        "booking_id": 8,
+        "name": "Golden Yadav",
+        "phone": "2354675412",
+        "persons": 6,
+        "table": [
+            "T1",
+            "T1",
+            "T2",
+            "T2",
+            "T2",
+            "T3"
+        ],
+        "sheet": [
+            "S1",
+            "S2",
+            "S1",
+            "S2",
+            "S3",
+            "S1"
+        ],
+        "date": "2026-03-31",
+        "time": "11-1",
+        "amount": 850,
+        "status": "Cancelled"
+    },
+    {
+        "booking_id": 9,
+        "name": "Goldy Rai",
+        "phone": "2345654312",
+        "persons": 8,
+        "table": [
+            "T7",
+            "T7",
+            "T7",
+            "T7",
+            "T7",
+            "T7",
+            "T7",
+            "T7"
+        ],
+        "sheet": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S7",
+            "S8"
+        ],
+        "date": "2026-03-31",
+        "time": "1-3",
+        "amount": 1760,
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": 10,
+        "name": "Ansh Raaz",
+        "phone": "2345654312",
+        "persons": 4,
+        "table": [
+            "T1",
+            "T1",
+            "T1",
+            "T1"
+        ],
+        "sheet": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+        ],
+        "date": "2026-04-2",
+        "time": "11-1",
+        "amount": 400,
+        "status": "Cancelled"
+    },
+    {
+        "booking_id": "a2fcd93a",
+        "name": "goldy",
+        "phone": "6789543212",
+        "persons": 2,
+        "table": [
+            "T4",
+            "T4"
+        ],
+        "sheet": [
+            "S1",
+            "S2"
+        ],
+        "date": "2026-04-02",
+        "time": "9-11",
+        "amount": 240,
+        "payment_status": "PAID",
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": "59d",
+        "name": "goldy",
+        "phone": "2345676754",
+        "persons": 2,
+        "table": [
+            "T4",
+            "T4"
+        ],
+        "sheet": [
+            "S1",
+            "S2"
+        ],
+        "date": "2026-04-02",
+        "time": "11-1",
+        "amount": 240,
+        "payment_status": "PAID",
+        "status": "Confirmed"
+    },
+    {
+        "booking_id": "d25",
+        "name": "sara",
+        "phone": "7209592431",
+        "persons": 4,
+        "table": [
+            "T5",
+            "T5",
+            "T5",
+            "T5"
+        ],
+        "sheet": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+        ],
+        "date": "2026-04-03",
+        "time": "1-3",
+        "amount": 1000,
+        "payment_status": "PENDING",
+        "status": "Confirmed"
+    }
+]

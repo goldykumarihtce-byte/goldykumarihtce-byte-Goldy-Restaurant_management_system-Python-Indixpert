@@ -1,0 +1,528 @@
+[
+    {
+        "id": 1,
+        "name": "Paneer Butter Masala",
+        "type": "veg",
+        "half_price": 120,
+        "full_price": 220
+    },
+    {
+        "id": 2,
+        "name": "Kadai Paneer",
+        "type": "veg",
+        "half_price": 130,
+        "full_price": 240
+    },
+    {
+        "id": 3,
+        "name": "Palak Paneer",
+        "type": "veg",
+        "half_price": 110,
+        "full_price": 210
+    },
+    {
+        "id": 4,
+        "name": "Mix Veg",
+        "type": "veg",
+        "half_price": 100,
+        "full_price": 180
+    },
+    {
+        "id": 5,
+        "name": "Veg Biryani",
+        "type": "veg",
+        "half_price": 120,
+        "full_price": 200
+    },
+    {
+        "id": 6,
+        "name": "Dal Tadka",
+        "type": "veg",
+        "half_price": 90,
+        "full_price": 160
+    },
+    {
+        "id": 7,
+        "name": "Dal Makhani",
+        "type": "veg",
+        "half_price": 110,
+        "full_price": 190
+    },
+    {
+        "id": 8,
+        "name": "Aloo Gobi",
+        "type": "veg",
+        "half_price": 90,
+        "full_price": 150
+    },
+    {
+        "id": 9,
+        "name": "Chole Masala",
+        "type": "veg",
+        "half_price": 100,
+        "full_price": 170
+    },
+    {
+        "id": 10,
+        "name": "Rajma",
+        "type": "veg",
+        "half_price": 100,
+        "full_price": 170
+    },
+    {
+        "id": 11,
+        "name": "Matar Paneer",
+        "type": "veg",
+        "half_price": 120,
+        "full_price": 210
+    },
+    {
+        "id": 12,
+        "name": "Shahi Paneer",
+        "type": "veg",
+        "half_price": 140,
+        "full_price": 250
+    },
+    {
+        "id": 13,
+        "name": "Malai Kofta",
+        "type": "veg",
+        "half_price": 130,
+        "full_price": 230
+    },
+    {
+        "id": 14,
+        "name": "Baingan Bharta",
+        "type": "veg",
+        "half_price": 100,
+        "full_price": 180
+    },
+    {
+        "id": 15,
+        "name": "Veg Kofta",
+        "type": "veg",
+        "half_price": 120,
+        "full_price": 220
+    },
+    {
+        "id": 16,
+        "name": "Corn Masala",
+        "type": "veg",
+        "half_price": 110,
+        "full_price": 200
+    },
+    {
+        "id": 17,
+        "name": "Paneer Bhurji",
+        "type": "veg",
+        "half_price": 120,
+        "full_price": 210
+    },
+    {
+        "id": 18,
+        "name": "Bhindi Masala",
+        "type": "veg",
+        "half_price": 90,
+        "full_price": 160
+    },
+    {
+        "id": 19,
+        "name": "Tandoori Roti Combo",
+        "type": "veg",
+        "half_price": 80,
+        "full_price": 140
+    },
+    {
+        "id": 20,
+        "name": "Veg Fried Rice",
+        "type": "veg",
+        "half_price": 100,
+        "full_price": 180
+    },
+    {
+        "id": 21,
+        "name": "Chicken Curry",
+        "type": "non-veg",
+        "half_price": 150,
+        "full_price": 260
+    },
+    {
+        "id": 22,
+        "name": "Butter Chicken",
+        "type": "non-veg",
+        "half_price": 170,
+        "full_price": 300
+    },
+    {
+        "id": 23,
+        "name": "Chicken Biryani",
+        "type": "non-veg",
+        "half_price": 160,
+        "full_price": 280
+    },
+    {
+        "id": 24,
+        "name": "Mutton Curry",
+        "type": "non-veg",
+        "half_price": 200,
+        "full_price": 350
+    },
+    {
+        "id": 25,
+        "name": "Mutton Biryani",
+        "type": "non-veg",
+        "half_price": 210,
+        "full_price": 380
+    },
+    {
+        "id": 26,
+        "name": "Egg Curry",
+        "type": "non-veg",
+        "half_price": 100,
+        "full_price": 180
+    },
+    {
+        "id": 27,
+        "name": "Fish Curry",
+        "type": "non-veg",
+        "half_price": 180,
+        "full_price": 300
+    },
+    {
+        "id": 28,
+        "name": "Chicken Tikka Masala",
+        "type": "non-veg",
+        "half_price": 170,
+        "full_price": 290
+    },
+    {
+        "id": 29,
+        "name": "Chicken Do Pyaza",
+        "type": "non-veg",
+        "half_price": 150,
+        "full_price": 260
+    },
+    {
+        "id": 30,
+        "name": "Chicken Korma",
+        "type": "non-veg",
+        "half_price": 160,
+        "full_price": 280
+    },
+    {
+        "id": 31,
+        "name": "Keema Curry",
+        "type": "non-veg",
+        "half_price": 180,
+        "full_price": 300
+    },
+    {
+        "id": 32,
+        "name": "Prawn Masala",
+        "type": "non-veg",
+        "half_price": 200,
+        "full_price": 350
+    },
+    {
+        "id": 33,
+        "name": "Chicken Lollipop",
+        "type": "non-veg",
+        "half_price": 140,
+        "full_price": 240
+    },
+    {
+        "id": 34,
+        "name": "Chicken 65",
+        "type": "non-veg",
+        "half_price": 150,
+        "full_price": 260
+    },
+    {
+        "id": 35,
+        "name": "Tandoori Chicken",
+        "type": "non-veg",
+        "half_price": 180,
+        "full_price": 320
+    },
+    {
+        "id": 36,
+        "name": "Fish Fry",
+        "type": "non-veg",
+        "half_price": 170,
+        "full_price": 290
+    },
+    {
+        "id": 37,
+        "name": "Egg Bhurji",
+        "type": "non-veg",
+        "half_price": 90,
+        "full_price": 160
+    },
+    {
+        "id": 38,
+        "name": "Chicken Fried Rice",
+        "type": "non-veg",
+        "half_price": 140,
+        "full_price": 240
+    },
+    {
+        "id": 39,
+        "name": "Chicken Noodles",
+        "type": "non-veg",
+        "half_price": 130,
+        "full_price": 230
+    },
+    {
+        "id": 40,
+        "name": "Mutton Rogan Josh",
+        "type": "non-veg",
+        "half_price": 220,
+        "full_price": 400
+    },
+    {
+        "id": 41,
+        "name": "Gulab Jamun",
+        "type": "dessert",
+        "price": 40
+    },
+    {
+        "id": 42,
+        "name": "Rasgulla",
+        "type": "dessert",
+        "price": 35
+    },
+    {
+        "id": 43,
+        "name": "Ice Cream",
+        "type": "dessert",
+        "price": 60
+    },
+    {
+        "id": 44,
+        "name": "Chocolate Cake",
+        "type": "dessert",
+        "price": 120
+    },
+    {
+        "id": 45,
+        "name": "Vanilla Cake",
+        "type": "dessert",
+        "price": 100
+    },
+    {
+        "id": 46,
+        "name": "Brownie",
+        "type": "dessert",
+        "price": 80
+    },
+    {
+        "id": 47,
+        "name": "Kheer",
+        "type": "dessert",
+        "price": 50
+    },
+    {
+        "id": 48,
+        "name": "Rabri",
+        "type": "dessert",
+        "price": 70
+    },
+    {
+        "id": 49,
+        "name": "Jalebi",
+        "type": "dessert",
+        "price": 60
+    },
+    {
+        "id": 50,
+        "name": "Ladoo",
+        "type": "dessert",
+        "price": 30
+    },
+    {
+        "id": 51,
+        "name": "Barfi",
+        "type": "dessert",
+        "price": 40
+    },
+    {
+        "id": 52,
+        "name": "Kulfi",
+        "type": "dessert",
+        "price": 50
+    },
+    {
+        "id": 53,
+        "name": "Pastry",
+        "type": "dessert",
+        "price": 70
+    },
+    {
+        "id": 54,
+        "name": "Fruit Custard",
+        "type": "dessert",
+        "price": 60
+    },
+    {
+        "id": 55,
+        "name": "Falooda",
+        "type": "dessert",
+        "price": 90
+    },
+    {
+        "id": 56,
+        "name": "Mousse",
+        "type": "dessert",
+        "price": 110
+    },
+    {
+        "id": 57,
+        "name": "Cheesecake",
+        "type": "dessert",
+        "price": 150
+    },
+    {
+        "id": 58,
+        "name": "Donut",
+        "type": "dessert",
+        "price": 80
+    },
+    {
+        "id": 59,
+        "name": "Cupcake",
+        "type": "dessert",
+        "price": 60
+    },
+    {
+        "id": 60,
+        "name": "pudding",
+        "type": "dessert",
+        "price": 90
+    },
+    {
+        "id": 61,
+        "name": "maggi",
+        "type": "veg",
+        "half_price": 25,
+        "full_price": 45
+    },
+    {
+        "id": 62,
+        "name": "kaju kathali",
+        "type": "dessert",
+        "price": 45
+    },
+    {
+        "id": 63,
+        "name": "Egg Roll",
+        "type": "non-veg",
+        "half_price": 70,
+        "full_price": 90
+    },
+    {
+        "id": 64,
+        "name": "samosa chat",
+        "type": "veg",
+        "half_price": 45,
+        "full_price": 85
+    },
+    {
+        "id": 65,
+        "name": "Garlic Roti",
+        "type": "veg",
+        "half_price": 40,
+        "full_price": 90
+    },
+    {
+        "id": 66,
+        "name": "Plain Rice",
+        "type": "veg",
+        "half_price": 40,
+        "full_price": 70
+    },
+    {
+        "id": 67,
+        "name": "Jeera Rice",
+        "type": "veg",
+        "half_price": 60,
+        "full_price": 100
+    },
+    {
+        "id": 68,
+        "name": "Steam Rice",
+        "type": "veg",
+        "half_price": 50,
+        "full_price": 80
+    },
+    {
+        "id": 69,
+        "name": "Veg Pulao",
+        "type": "veg",
+        "half_price": 90,
+        "full_price": 150
+    },
+    {
+        "id": 70,
+        "name": "Peas Pulao",
+        "type": "veg",
+        "half_price": 100,
+        "full_price": 160
+    },
+    {
+        "id": 71,
+        "name": "Kashmiri Pulao",
+        "type": "veg",
+        "half_price": 120,
+        "full_price": 180
+    },
+    {
+        "id": 72,
+        "name": "Curd Rice",
+        "type": "veg",
+        "half_price": 80,
+        "full_price": 130
+    },
+    {
+        "id": 73,
+        "name": "Lemon Rice",
+        "type": "veg",
+        "half_price": 80,
+        "full_price": 130
+    },
+    {
+        "id": 74,
+        "name": "Tomato Rice",
+        "type": "veg",
+        "half_price": 90,
+        "full_price": 140
+    },
+    {
+        "id": 75,
+        "name": "Fried Rice Special",
+        "type": "veg",
+        "half_price": 110,
+        "full_price": 180
+    },
+    {
+        "id": 76,
+        "name": "Tandoori Roti",
+        "type": "veg",
+        "half_price": 15,
+        "full_price": 25
+    },
+    {
+        "id": 77,
+        "name": "Butter Roti",
+        "type": "veg",
+        "half_price": 20,
+        "full_price": 30
+    },
+    {
+        "id": 78,
+        "name": "Plain Roti",
+        "type": "veg",
+        "half_price": 10,
+        "full_price": 20
+    }
+
+]

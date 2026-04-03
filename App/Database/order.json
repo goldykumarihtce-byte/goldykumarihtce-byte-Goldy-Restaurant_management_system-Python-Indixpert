@@ -1,0 +1,166 @@
+[
+    {
+        "order_id": 1,
+        "username": "guest",
+        "items": [
+            {
+                "name": "jalebi",
+                "type": "dessert",
+                "size": "single",
+                "price": 60,
+                "quantity": 2
+            }
+        ],
+        "Status": "Pending"
+    },
+    {
+        "order_id": 2,
+        "username": "Ravi",
+        "items": [
+            {
+                "name": "fish curry",
+                "type": "non-veg",
+                "size": "full",
+                "price": 300,
+                "quantity": 2
+            },
+            {
+                "name": "kaju kathali",
+                "type": "dessert",
+                "size": "single",
+                "price": 45,
+                "quantity": 4
+            }
+        ],
+        "Status": "Preparing"
+    },
+    {
+        "order_id": 3,
+        "username": "Goldy",
+        "items": [
+            {
+                "name": "falooda",
+                "type": "dessert",
+                "size": "single",
+                "price": 90,
+                "quantity": 2
+            },
+            {
+                "name": "egg curry",
+                "type": "non-veg",
+                "size": "full",
+                "price": 180,
+                "quantity": 2
+            }
+        ],
+        "Status": "Preparing"
+    },
+    {
+        "order_id": 4,
+        "username": "Ravi",
+        "items": [
+            {
+                "name": "kheer",
+                "type": "dessert",
+                "size": "single",
+                "price": 50,
+                "quantity": 2
+            },
+            {
+                "name": "ladoo",
+                "type": "dessert",
+                "size": "single",
+                "price": 30,
+                "quantity": 4
+            }
+        ],
+        "Status": "Pending"
+    },
+    {
+        "order_id": 5,
+        "username": "goldy",
+        "items": [
+            {
+                "name": "cupcake",
+                "type": "dessert",
+                "size": "single",
+                "price": 60,
+                "quantity": 4
+            },
+            {
+                "name": "kheer",
+                "type": "dessert",
+                "size": "single",
+                "price": 50,
+                "quantity": 4
+            }
+        ],
+        "Status": "Pending"
+    },
+    {
+        "order_id": 6,
+        "username": "goldy",
+        "items": [
+            {
+                "name": "shahi paneer",
+                "type": "veg",
+                "size": "full",
+                "price": 250,
+                "quantity": 2
+            }
+        ],
+        "Status": "Pending"
+    },
+    {
+        "order_id": 7,
+        "username": "sara",
+        "items": [
+            {
+                "name": "gulab jamun",
+                "type": "dessert",
+                "size": "single",
+                "price": 40,
+                "quantity": 3
+            }
+        ],
+        "Status": "Pending"
+    },
+    {
+        "order_id": 8,
+        "name": "Anmol",
+        "items": [
+            {
+                "id": 71,
+                "name": "Kashmiri Pulao",
+                "type": "veg",
+                "size": "full",
+                "price": 180,
+                "quantity": 4
+            }
+        ],
+        "Status": "Pending"
+    },
+    {
+        "order_id": 9,
+        "name": "sumit",
+        "items": [
+            {
+                "id": 21,
+                "name": "Chicken Curry",
+                "type": "non-veg",
+                "size": "full",
+                "price": 260,
+                "quantity": 2
+            },
+            {
+                "id": 20,
+                "name": "Veg Fried Rice",
+                "type": "veg",
+                "size": "half",
+                "price": 100,
+                "quantity": 5
+            }
+        ],
+        "Status": "Pending"
+    }
+]

@@ -1,0 +1,470 @@
+[
+    {
+        "id": 1,
+        "name": "Paneer Butter Masala",
+        "stock": 25,
+        "category": "Veg"
+    },
+    {
+        "id": 2,
+        "name": "Kadai Paneer",
+        "stock": 22,
+        "category": "Veg"
+    },
+    {
+        "id": 3,
+        "name": "Palak Paneer",
+        "stock": 20,
+        "category": "Veg"
+    },
+    {
+        "id": 4,
+        "name": "Mix Veg",
+        "stock": 18,
+        "category": "Veg"
+    },
+    {
+        "id": 5,
+        "name": "Veg Biryani",
+        "stock": 30,
+        "category": "Veg"
+    },
+    {
+        "id": 6,
+        "name": "Dal Tadka",
+        "stock": 17,
+        "category": "Veg"
+    },
+    {
+        "id": 7,
+        "name": "Dal Makhani",
+        "stock": 19,
+        "category": "Veg"
+    },
+    {
+        "id": 8,
+        "name": "Aloo Gobi",
+        "stock": 16,
+        "category": "Veg"
+    },
+    {
+        "id": 9,
+        "name": "Chole Masala",
+        "stock": 21,
+        "category": "Veg"
+    },
+    {
+        "id": 10,
+        "name": "Rajma",
+        "stock": 20,
+        "category": "Veg"
+    },
+    {
+        "id": 11,
+        "name": "Matar Paneer",
+        "stock": 23,
+        "category": "Veg"
+    },
+    {
+        "id": 12,
+        "name": "Shahi Paneer",
+        "stock": 24,
+        "category": "Veg"
+    },
+    {
+        "id": 13,
+        "name": "Malai Kofta",
+        "stock": 22,
+        "category": "Veg"
+    },
+    {
+        "id": 14,
+        "name": "Baingan Bharta",
+        "stock": 18,
+        "category": "Veg"
+    },
+    {
+        "id": 15,
+        "name": "Veg Kofta",
+        "stock": 20,
+        "category": "Veg"
+    },
+    {
+        "id": 16,
+        "name": "Corn Masala",
+        "stock": 17,
+        "category": "Veg"
+    },
+    {
+        "id": 17,
+        "name": "Paneer Bhurji",
+        "stock": 25,
+        "category": "Veg"
+    },
+    {
+        "id": 18,
+        "name": "Bhindi Masala",
+        "stock": 19,
+        "category": "Veg"
+    },
+    {
+        "id": 19,
+        "name": "Tandoori Roti Combo",
+        "stock": 30,
+        "category": "Veg"
+    },
+    {
+        "id": 20,
+        "name": "Veg Fried Rice",
+        "stock": 21,
+        "category": "Veg"
+    },
+    {
+        "id": 21,
+        "name": "Chicken Curry",
+        "stock": 18,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 22,
+        "name": "Butter Chicken",
+        "stock": 22,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 23,
+        "name": "Chicken Biryani",
+        "stock": 28,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 24,
+        "name": "Mutton Curry",
+        "stock": 18,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 25,
+        "name": "Mutton Biryani",
+        "stock": 16,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 26,
+        "name": "Egg Curry",
+        "stock": 25,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 27,
+        "name": "Fish Curry",
+        "stock": 17,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 28,
+        "name": "Chicken Tikka Masala",
+        "stock": 21,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 29,
+        "name": "Chicken Do Pyaza",
+        "stock": 20,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 30,
+        "name": "Chicken Korma",
+        "stock": 19,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 31,
+        "name": "Keema Curry",
+        "stock": 15,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 32,
+        "name": "Prawn Masala",
+        "stock": 14,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 33,
+        "name": "Chicken Lollipop",
+        "stock": 22,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 34,
+        "name": "Chicken 65",
+        "stock": 23,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 35,
+        "name": "Tandoori Chicken",
+        "stock": 18,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 36,
+        "name": "Fish Fry",
+        "stock": 17,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 37,
+        "name": "Egg Bhurji",
+        "stock": 26,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 38,
+        "name": "Chicken Fried Rice",
+        "stock": 24,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 39,
+        "name": "Chicken Noodles",
+        "stock": 23,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 40,
+        "name": "Mutton Rogan Josh",
+        "stock": 15,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 41,
+        "name": "Gulab Jamun",
+        "stock": 30,
+        "category": "Sweets"
+    },
+    {
+        "id": 42,
+        "name": "Rasgulla",
+        "stock": 28,
+        "category": "Sweets"
+    },
+    {
+        "id": 43,
+        "name": "Ice Cream",
+        "stock": 25,
+        "category": "Sweets"
+    },
+    {
+        "id": 44,
+        "name": "Chocolate Cake",
+        "stock": 18,
+        "category": "Sweets"
+    },
+    {
+        "id": 45,
+        "name": "Vanilla Cake",
+        "stock": 17,
+        "category": "Sweets"
+    },
+    {
+        "id": 46,
+        "name": "Brownie",
+        "stock": 20,
+        "category": "Sweets"
+    },
+    {
+        "id": 47,
+        "name": "Kheer",
+        "stock": 22,
+        "category": "Sweets"
+    },
+    {
+        "id": 48,
+        "name": "Rabri",
+        "stock": 19,
+        "category": "Sweets"
+    },
+    {
+        "id": 49,
+        "name": "Jalebi",
+        "stock": 27,
+        "category": "Sweets"
+    },
+    {
+        "id": 50,
+        "name": "Ladoo",
+        "stock": 30,
+        "category": "Sweets"
+    },
+    {
+        "id": 51,
+        "name": "Barfi",
+        "stock": 26,
+        "category": "Sweets"
+    },
+    {
+        "id": 52,
+        "name": "Kulfi",
+        "stock": 24,
+        "category": "Sweets"
+    },
+    {
+        "id": 53,
+        "name": "Pastry",
+        "stock": 21,
+        "category": "Sweets"
+    },
+    {
+        "id": 54,
+        "name": "Fruit Custard",
+        "stock": 19,
+        "category": "Sweets"
+    },
+    {
+        "id": 55,
+        "name": "Falooda",
+        "stock": 18,
+        "category": "Sweets"
+    },
+    {
+        "id": 56,
+        "name": "Mousse",
+        "stock": 17,
+        "category": "Sweets"
+    },
+    {
+        "id": 57,
+        "name": "Cheesecake",
+        "stock": 16,
+        "category": "Sweets"
+    },
+    {
+        "id": 58,
+        "name": "Donut",
+        "stock": 42,
+        "category": "Sweets"
+    },
+    {
+        "id": 59,
+        "name": "Cupcake",
+        "stock": 22,
+        "category": "Sweets"
+    },
+    {
+        "id": 60,
+        "name": "Pudding",
+        "stock": 18,
+        "category": "Sweets"
+    },
+    {
+        "id": 61,
+        "name": "Maggi",
+        "stock": 30,
+        "category": "Veg"
+    },
+    {
+        "id": 62,
+        "name": "Kaju Kathali",
+        "stock": 30,
+        "category": "Sweets"
+    },
+    {
+        "id": 63,
+        "name": "Egg Roll",
+        "stock": 28,
+        "category": "Non-Veg"
+    },
+    {
+        "id": 64,
+        "name": "Samosa Chat",
+        "stock": 27,
+        "category": "Veg"
+    },
+    {
+        "id": 65,
+        "name": "Bread",
+        "stock": 30,
+        "category": "Veg"
+    },
+    {
+        "id": 66,
+        "name": "Plain Rice",
+        "category": "Veg",
+        "stock": 25
+    },
+    {
+        "id": 67,
+        "name": "Jeera Rice",
+        "category": "Veg",
+        "stock": 20
+    },
+    {
+        "id": 68,
+        "name": "Steam Rice",
+        "category": "Veg",
+        "stock": 22
+    },
+    {
+        "id": 69,
+        "name": "Veg Pulao",
+        "category": "Veg",
+        "stock": 18
+    },
+    {
+        "id": 70,
+        "name": "Peas Pulao",
+        "category": "Veg",
+        "stock": 17
+    },
+    {
+        "id": 71,
+        "name": "Kashmiri Pulao",
+        "category": "Veg",
+        "stock": 56
+    },
+    {
+        "id": 72,
+        "name": "Curd Rice",
+        "category": "Veg",
+        "stock": 50
+    },
+    {
+        "id": 73,
+        "name": "Lemon Rice",
+        "category": "Veg",
+        "stock": 45
+    },
+    {
+        "id": 74,
+        "name": "Tomato Rice",
+        "category": "Veg",
+        "stock": 60
+    },
+    {
+        "id": 75,
+        "name": "Fried Rice Special",
+        "category": "Veg",
+        "stock": 50
+    },
+    {
+        "id": 76,
+        "name": "Tandoori Roti",
+        "category": "Veg",
+        "stock": 50
+    },
+    {
+        "id": 77,
+        "name": "Butter Roti",
+        "category": "Veg",
+        "stock": 45
+    },
+    {
+        "id": 78,
+        "name": "Plain Roti",
+        "category": "Veg",
+        "stock": 60
+    }
+]

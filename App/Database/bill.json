@@ -1,0 +1,153 @@
+[
+    {
+        "order_id": 2,
+        "username": "Ravi",
+        "items": [
+            {
+                "name": "fish curry",
+                "type": "non-veg",
+                "size": "full",
+                "price": 300,
+                "quantity": 2
+            },
+            {
+                "name": "kaju kathali",
+                "type": "dessert",
+                "size": "single",
+                "price": 45,
+                "quantity": 4
+            }
+        ],
+        "subtotal": 180,
+        "gst": 9.0,
+        "total_payment": 189.0,
+        "payment_method": "UPI",
+        "upi_details": {
+            "qr_pin": "****"
+        },
+        "card_details": null,
+        "payment_status": "Paid",
+        "date": "2026-03-26 20:59:20"
+    },
+    {
+        "order_id": 3,
+        "username": "Goldy",
+        "items": [
+            {
+                "name": "falooda",
+                "type": "dessert",
+                "size": "single",
+                "price": 90,
+                "quantity": 2
+            },
+            {
+                "name": "egg curry",
+                "type": "non-veg",
+                "size": "full",
+                "price": 180,
+                "quantity": 2
+            }
+        ],
+        "subtotal": 540,
+        "gst": 27.0,
+        "total_payment": 567.0,
+        "payment_method": "UPI",
+        "upi_details": {
+            "upi_id": "goldy@bob"
+        },
+        "card_details": null,
+        "payment_status": "Paid",
+        "date": "2026-03-26 21:24:33"
+    },
+    {
+        "order_id": 4,
+        "username": "Ravi",
+        "items": [
+            {
+                "name": "kheer",
+                "type": "dessert",
+                "size": "single",
+                "price": 50,
+                "quantity": 2
+            },
+            {
+                "name": "ladoo",
+                "type": "dessert",
+                "size": "single",
+                "price": 30,
+                "quantity": 4
+            }
+        ],
+        "subtotal": 220,
+        "gst": 11.0,
+        "total_payment": 231.0,
+        "payment_method": "UPI",
+        "upi_details": {
+            "qr_pin": "****"
+        },
+        "card_details": null,
+        "payment_status": "Paid",
+        "date": "2026-03-28 11:40:29"
+    },
+    {
+        "order_id": 5,
+        "username": "goldy",
+        "items": [
+            {
+                "name": "cupcake",
+                "type": "dessert",
+                "size": "single",
+                "price": 60,
+                "quantity": 4
+            },
+            {
+                "name": "kheer",
+                "type": "dessert",
+                "size": "single",
+                "price": 50,
+                "quantity": 4
+            }
+        ],
+        "subtotal": 440,
+        "gst": 22.0,
+        "total_payment": 462.0,
+        "payment_method": "Cash",
+        "date": "2026-03-28 14:30:26"
+    },
+    {
+        "order_id": 6,
+        "username": "goldy",
+        "items": [
+            {
+                "name": "shahi paneer",
+                "type": "veg",
+                "size": "full",
+                "price": 250,
+                "quantity": 2
+            }
+        ],
+        "subtotal": 500,
+        "gst": 25.0,
+        "total_payment": 525.0,
+        "payment_method": "UPI",
+        "date": "2026-04-02 11:06:00"
+    },
+    {
+        "order_id": 7,
+        "username": "sara",
+        "items": [
+            {
+                "name": "gulab jamun",
+                "type": "dessert",
+                "size": "single",
+                "price": 40,
+                "quantity": 3
+            }
+        ],
+        "subtotal": 120,
+        "gst": 6.0,
+        "total_payment": 126.0,
+        "payment_method": "UPI",
+        "date": "2026-04-02 11:29:40"
+    }
+]
